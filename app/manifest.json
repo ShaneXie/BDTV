@@ -29,6 +29,7 @@
         "*://*.douyutv.com/*"
       ],
       "css": [
+        "css/flex-layout.min.css",
         "css/jquery.modal.css",
         "css/content.css"
       ],
