@@ -29,13 +29,17 @@
         "*://*.douyutv.com/*"
       ],
       "css": [
+        "css/jquery.modal.css",
         "css/content.css"
       ],
       "js": [
         "js/jquery-2.2.2.min.js",
-        "js/bootstrap.min.js",
+        "js/jquery.modal.min.js",
         "js/content.js"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "html/*.html"
   ]
 }
