@@ -32,4 +32,12 @@
 		}
 	); 
 
+	function getConfig () {
+
+	}
+	
+	function updateConfig (key, value) {
+		// body...
+	}
+
 })();
