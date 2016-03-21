@@ -1,0 +1,41 @@
+{
+  "name": "鱼刺",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "斗鱼TV拓展插件",
+  "homepage_url": "http://430.io",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "assets/icons/icon19.png",
+    "default_title": "鱼刺",
+    "default_popup": "html/popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.douyutv.com/*"
+      ],
+      "css": [
+        "css/content.css"
+      ],
+      "js": [
+        "js/jquery-2.2.2.min.js",
+        "js/bootstrap.min.js",
+        "js/content.js"
+      ]
+    }
+  ]
+}
