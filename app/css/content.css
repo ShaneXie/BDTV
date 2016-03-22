@@ -1,5 +1,5 @@
 .bdtv-trigger a {
-	border: 2px solid #f70;
+	border: 1px solid #f70;
 	border-radius: 5px;
 }
 
@@ -48,7 +48,19 @@
 	border-top: #616161 1px solid;
 }
 
-/*switch css*/
+/****************** dark css ***********************/
+.yc-dark-5 {
+    color: #E0E0E0;
+    background-color: #212121 !important;
+}
+.yc-dark-4 {
+    color: #E0E0E0;
+    background-color: #424242 !important;
+}
+.yc-dark-font-color {
+    color: #E0E0E0 !important;
+}
+/****************** switch css *********************/
 .onoffswitch {
     position: relative; width: 63px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;

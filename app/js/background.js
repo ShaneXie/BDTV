@@ -3,20 +3,27 @@ chrome.extension.onMessage.addListener(
 		if (request.action === "showIcon") {
 			chrome.pageAction.show(sender.tab.id);
 		}
-		if (request.action == "queryConfig") {
-			chrome.storage.sync.get('config', function(object) {
+		if (request.action === "updateConfig") {
+			console.info(request.config);
+			chrome.storage.local.set({'config':request.config}, function() {
+				console.info('config update');
+			});
+		}
+		if (request.action === "queryConfig") {
+			//sendResponse({config: "config1"});
+			chrome.storage.local.get('config', function(object) {
 				var defaultConfig = {
 					ADBlock: true,
 					darkMode: true,
 					hideChat: false
 				}
+				console.info("queryConfig");
 				var config = object.config===undefined?defaultConfig:object.config;
-				chrome.tabs.sendMessage(sender.tab.id, 
-		        	{action:"initConfig", config:config},
-		        	function(response){}
-		        );
+				sendResponse({config: config});
 			});
+			return true;
 		}
+		return false;
 	}
 );
 
