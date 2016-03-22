@@ -44,6 +44,10 @@
 	border-bottom: #616161 1px solid;
 }
 
+.yc-opt-text sub {
+    font-size: 70%;
+}
+
 .yc-opt:first-of-type {
 	border-top: #616161 1px solid;
 }

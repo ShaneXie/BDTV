@@ -27,18 +27,19 @@
 					var modalURL = chrome.extension.getURL('../html/modal.html');
 
 					$("body").append(modal);
-					$( "#modalWrap" ).load( modalURL );
+					$( "#modalWrap" ).load( modalURL, function () {
+						var trigger = '<li class="fl bdtv-trigger">'+
+							'<a href="#modal" rel="modal:open">鱼刺</a>'+
+							'</li>';
 
-					var trigger = '<li class="fl bdtv-trigger">'+
-						'<a href="#modal" rel="modal:open">鱼刺</a>'+
-						'</li>';
+						if ($(".header_nav").length) 
+							$(".header_nav").append(trigger);
+						else 
+							$(".head-nav").append(trigger);
 
-					if ($(".header_nav").length) 
-						$(".header_nav").append(trigger);
-					else 
-						$(".head-nav").append(trigger);
+						resolve("Component initialized");
+					} );
 
-					resolve("Component initialized");
 				}
 			);
 
