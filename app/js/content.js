@@ -75,7 +75,15 @@
 		$(".room_mes .r_else_tips dd a").addClass('yc-dark-font-color');
 		$("#live_videobar").addClass('yc-dark-4');
 		$("#header").addClass('yc-dark-4');
-		$("#header a").addClass('yc-dark-font-color');
+		$("#header a").addClass('yc-dark-font-color-lighter');
+		$("#chat_lines").attr('style', 'background-color: black !important');
+		$(".text_cont").addClass('yc-dark-font-color-lighter');
+		$("#js_chat_mem").addClass('yc-dark-4');
+		$(".chat_mem_t").addClass('yc-dark-4');
+		$(".m_cnt").attr('style', 'background-color: #757575 !important');
+		$(".m_cnt a").addClass('yc-dark-font-color');
+		$("#broadcast_div").addClass('yc-dark-4');
+		$(".c_speak").attr('style', 'background-color: #212121 !important');
 
 	}
 

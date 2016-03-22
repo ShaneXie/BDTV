@@ -49,6 +49,9 @@
 }
 
 /****************** dark css ***********************/
+textarea {
+    background-color: #757575 !important;
+}
 .yc-dark-5 {
     color: #9E9E9E;
     background-color: #212121 !important;
@@ -60,6 +63,10 @@
 .yc-dark-font-color {
     color: #9E9E9E !important;
 }
+.yc-dark-font-color-lighter {
+    color: #E0E0E0 !important;
+}
+
 /****************** switch css *********************/
 .onoffswitch {
     position: relative; width: 63px;
