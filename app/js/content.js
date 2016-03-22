@@ -69,11 +69,13 @@
 		$("#live_userinfo").addClass('yc-dark-4');
 		$("#live_userinfo").attr('style', 'background-color: #424242 !important');
 		$(".headline h1").addClass('yc-dark-font-color');
-		$(".r_else li").attr('style', 'color: #BDBDBD !important');
+		$(".r_else li").attr('style', 'color: #9E9E9E !important');
 		$(".redcolor").addClass('yc-dark-font-color');
 		$("#room_tags").addClass('yc-dark-font-color');
 		$(".room_mes .r_else_tips dd a").addClass('yc-dark-font-color');
 		$("#live_videobar").addClass('yc-dark-4');
+		$("#header").addClass('yc-dark-4');
+		$("#header a").addClass('yc-dark-font-color');
 
 	}
 
