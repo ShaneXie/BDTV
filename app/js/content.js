@@ -11,6 +11,8 @@
 			initConfig();
 			initPage();
 
+
+
 			$("#yc-dark-switch-label").on('click',function () {
 				toggleDark();
 			});
@@ -60,8 +62,21 @@
 	function initPage () {
 		console.info("initPage()");
 		console.info(userConfig);
+		removeAD();
 		if (userConfig.darkMode) 
 			applyDarkCSS();
+	}
+
+	function removeAD () {
+		$("#chat-top-ad").remove();
+		$("#main_col_box").addClass('yc-fix-top-margin');
+		$("#right_col").addClass('yc-fix-top-margin');
+		$("#main_col").addClass('yc-fix-main_col-top-margin');
+		//$("#sign_p_15").remove();
+		//$("#sign_p_18").remove();
+		$(".sign_posid").remove();
+		$("#dy_bottom_shadow").remove();
+		$(".chat-right-ad").remove();
 	}
 
 	function applyDarkCSS () {
@@ -85,6 +100,9 @@
 		$(".m_cnt a").addClass('yc-dark-font-color');
 		$("#broadcast_div").addClass('yc-dark-4');
 		$(".c_speak").attr('style', 'background-color: #212121 !important');
+		$(".chat-n-tit h3").addClass('yc-dark-font-color');
+		$(".chat-live-rec .title h3").addClass('yc-dark-font-color');
+		$(".chat-live-rec .cont ul li a .txt h4").addClass('yc-dark-font-color');
 
 	}
 

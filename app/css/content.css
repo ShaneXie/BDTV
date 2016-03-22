@@ -52,10 +52,30 @@
 	border-top: #616161 1px solid;
 }
 
+/****************** layout css ***********************/
+.yc-fix-top-margin {
+    margin-top: 75px !important;
+}
+.yc-fix-main_col-top-margin {
+    margin-top: 0px !important;
+}
+#header {
+    border-bottom: 0 solid red !important;
+}
+#live_videobar {
+    border: 0 solid red !important;
+}
+#js_chat_mem {
+    border-left: 1px solid #212121 !important;
+}
 /****************** dark css ***********************/
 textarea {
     background-color: #757575 !important;
 }
+img {
+    -webkit-filter: brightness(70%);
+}
+
 .yc-dark-5 {
     color: #9E9E9E;
     background-color: #212121 !important;
