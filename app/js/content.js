@@ -1,6 +1,17 @@
 (function (){
 	// show icon
 	chrome.runtime.sendMessage({action: "showIcon"}, function(response) {});
+	chrome.runtime.sendMessage({action: "queryConfig"}, function(response) {});
+
+	chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+		if (request.action === "initConfig") {
+			console.log("reciving config");
+			console.log(request.config);
+			initConfig(request.config);
+		}	
+	});
+
+	var userConfig;
 
 	// document ready
 	$(function() {
@@ -32,10 +43,15 @@
 		}
 	); 
 
-	function getConfig () {
-
+	function initConfig (cfg) {
+		userConfig = cfg;
+		//update ui
+		console.log(userConfig);
+		$("#yc-ad-switch").prop( "checked", userConfig.ADBlock );
+		$("#yc-dark-switch").prop( "checked", userConfig.darkMode );
+		$("#yc-chat-switch").prop( "checked", userConfig.hideChat );
 	}
-	
+
 	function updateConfig (key, value) {
 		// body...
 	}
