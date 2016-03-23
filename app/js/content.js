@@ -103,6 +103,14 @@
 		$(".chat-n-tit h3").addClass('yc-dark-font-color');
 		$(".chat-live-rec .title h3").addClass('yc-dark-font-color');
 		$(".chat-live-rec .cont ul li a .txt h4").addClass('yc-dark-font-color');
+		$(".js_share_box_1").addClass('yc-dark-5');
+		$("#js_share_more1").addClass('yc-dark-4');
+		$(".app_box").addClass('yc-dark-4');
+		$(".cq_list ul li").addClass('yc-dark-4');
+		$("#cqf_but").addClass('yc-dark-5');
+		$("#details_div").addClass('yc-dark-5');
+		$(".chat_cls a").addClass('yc-dark-5');
+		$(".lw_item_hovercont").addClass('yc-dark-5');
 
 	}
 
