@@ -11,8 +11,6 @@
 			initConfig();
 			initPage();
 
-
-
 			$("#yc-dark-switch-label").on('click',function () {
 				toggleDark();
 			});
@@ -42,9 +40,11 @@
 						else 
 							$(".head-nav").append(trigger);
 
+						var img = chrome.extension.getURL('../assets/img/alipay.png');
+						$("#donation-img").attr("src", img);
+						
 						resolve("Component initialized");
 					} );
-
 				}
 			);
 
@@ -82,20 +82,13 @@
 	function hideChat () {
 		$("#right_col").attr('style', "display: none !important");
 		$("#live_userinfo").attr('style', "display: none !important");
-		var sideNavStyle = $("#large_nav").attr('style');
-		$(".mainbody").addClass("yc-hide-chat-1");
-		console.info(sideNavStyle);
-		// if (sideNavStyle === "display: none;") {
-			
-		// 	console.info("adding css to mainbody");
-		// } else {
-
-		// }
+		$("#main_col_box").removeAttr('style');
+		$("#main_col_box").addClass("yc-hide-chat");
 	}
-
 	function showChat () {
 		$("#right_col").removeAttr('style');
 		$("#live_userinfo").removeAttr('style');
+		$("#main_col_box").removeClass("yc-hide-chat");
 	}
 
 	function removeAD () {

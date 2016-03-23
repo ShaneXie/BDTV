@@ -12,9 +12,9 @@ a:active {text-decoration: none;}
 
 .main {
 	width: 320px;
-	height: 520px;
+	height: 220px;
 	background-color: #6441A5;
-	color: white;
+	color: yellow;
 	font-size: 14px;
 	font-weight: bold;
 	display: flex;
@@ -24,4 +24,6 @@ a:active {text-decoration: none;}
 
 .title {
 	text-align: center;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
 }

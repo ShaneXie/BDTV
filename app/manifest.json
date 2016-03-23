@@ -42,6 +42,7 @@
     }
   ],
   "web_accessible_resources": [
-    "html/*.html"
+    "html/*.html",
+    "assets/*"
   ]
 }

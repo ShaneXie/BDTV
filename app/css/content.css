@@ -68,10 +68,13 @@
 #js_chat_mem {
     border-left: 1px solid #212121 !important;
 }
+#room_container {
+	min-height: 100vh !important;
+}
 /****************** hide chat css ***********************/
 .yc-hide-chat {
-	width: 90vw !important;
-	height: calc(100vh - 100px) !important;
+	width: 80vw !important;
+	height: calc(100vh - 250px) !important;
 }
 /****************** dark css ***********************/
 textarea {
