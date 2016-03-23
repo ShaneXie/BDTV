@@ -68,6 +68,11 @@
 #js_chat_mem {
     border-left: 1px solid #212121 !important;
 }
+/****************** hide chat css ***********************/
+.yc-hide-chat {
+	width: 90vw !important;
+	height: calc(100vh - 100px) !important;
+}
 /****************** dark css ***********************/
 textarea {
     background-color: #757575 !important;
@@ -75,13 +80,16 @@ textarea {
 img {
     -webkit-filter: brightness(70%);
 }
+.banner {
+	background: #212121 !important;
+}
 
 .yc-dark-5 {
-    color: #9E9E9E;
+    color: #9E9E9E !important;
     background-color: #212121 !important;
 }
 .yc-dark-4 {
-    color: #9E9E9E;
+    color: #9E9E9E !important;
     background-color: #424242 !important;
 }
 .yc-dark-font-color {

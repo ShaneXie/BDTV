@@ -16,6 +16,9 @@
 			$("#yc-dark-switch-label").on('click',function () {
 				toggleDark();
 			});
+			$("#yc-chat-switch-label").on('click',function () {
+				toggleChat();
+			});
 		});
 	});
 
@@ -51,7 +54,6 @@
 	function toggleDark () {
 		userConfig.darkMode = !userConfig.darkMode;
 		if (userConfig.darkMode) {
-			console.info("applyDarkCSS");
 			applyDarkCSS();
 		} else {
 			removeDarkCSS();
@@ -59,12 +61,41 @@
 		updateConfig();
 	}
 
+	function toggleChat () {
+		userConfig.hideChat = !userConfig.hideChat;
+		if (userConfig.hideChat) {
+			hideChat();
+		} else {
+			showChat();
+		}
+		updateConfig();
+	}
+
 	function initPage () {
-		console.info("initPage()");
-		console.info(userConfig);
 		removeAD();
 		if (userConfig.darkMode) 
 			applyDarkCSS();
+		if (userConfig.hideChat) 
+			hideChat();
+	}
+
+	function hideChat () {
+		$("#right_col").attr('style', "display: none !important");
+		$("#live_userinfo").attr('style', "display: none !important");
+		var sideNavStyle = $("#large_nav").attr('style');
+		$(".mainbody").addClass("yc-hide-chat-1");
+		console.info(sideNavStyle);
+		// if (sideNavStyle === "display: none;") {
+			
+		// 	console.info("adding css to mainbody");
+		// } else {
+
+		// }
+	}
+
+	function showChat () {
+		$("#right_col").removeAttr('style');
+		$("#live_userinfo").removeAttr('style');
 	}
 
 	function removeAD () {
@@ -76,6 +107,10 @@
 		$("#dy_bottom_shadow").remove();
 		$(".chat-right-ad").remove();
 		$(".lol-ad").remove();
+		$(".assort-ad").remove();
+		$("div[data-type='sign']").remove();
+		$("div[data-type='dyrec']").remove();
+		$(".bglink").remove();
 	}
 
 	var darkCSSList = {
@@ -112,6 +147,19 @@
 			{ selector: ".play-list li .mes-tit h3", cssClass: "yc-dark-font-color" },
 			{ selector: ".tse-content", cssClass: "yc-dark-4" },
 			{ selector: ".broadcast-meta .info .title", cssClass: "yc-dark-font-color" },
+			{ selector: ".tag_list ul li a", cssClass: "yc-dark-font-color" },
+			{ selector: ".head-nav .assort .a-pop", cssClass: "yc-dark-4" },
+			{ selector: ".head-nav .assort .a-list .btns li a", cssClass: "yc-dark-5" },
+			{ selector: ".head-nav .assort .a-list>h3", cssClass: "yc-dark-font-color" },
+			{ selector: ".item-data .unit .title", cssClass: "yc-dark-4" },
+			{ selector: ".row .row-top .t-tag a", cssClass: "yc-dark-4" },
+			{ selector: ".hot-recom li", cssClass: "yc-dark-4" },
+			{ selector: ".hot-word", cssClass: "yc-dark-4" },
+			{ selector: ".classify-li ul li a", cssClass: "yc-dark-font-color" },
+			{ selector: ".classify_li ul li a", cssClass: "yc-dark-font-color" },
+			{ selector: ".row a", cssClass: "yc-dark-font-color" },
+			{ selector: ".hot-recom li .text", cssClass: "yc-dark-font-color" },
+			{ selector: ".head-oth .o-history .h-list>li", cssClass: "yc-dark-4" }
 		],
 		attr: [
 			{ selector: "#live_userinfo", style: 'background-color: #424242 !important' },
@@ -119,7 +167,7 @@
 			{ selector: "#chat_lines", style: 'background-color: black !important' },
 			{ selector: ".m_cnt", style: 'background-color: #757575 !important' },
 			{ selector: ".c_speak", style: 'background-color: #212121 !important' },
-			{ selector: ".cq_fans .m_list .m_nav ul li.activ a", style: 'color: #9E9E9E !important' },
+			{ selector: ".cq_fans .m_list .m_nav ul li.activ a", style: 'color: #9E9E9E !important' }
 		]
 	};
 
