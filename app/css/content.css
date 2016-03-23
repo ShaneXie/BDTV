@@ -60,7 +60,7 @@
     margin-top: 0px !important;
 }
 #header {
-    border-bottom: 0 solid red !important;
+    border-bottom: 1px solid red !important;
 }
 #live_videobar {
     border: 0 solid red !important;
@@ -89,6 +89,9 @@ img {
 }
 .yc-dark-font-color-lighter {
     color: #E0E0E0 !important;
+}
+.yc-dark-noborder {
+	border: 0 solid !important;
 }
 
 /****************** switch css *********************/

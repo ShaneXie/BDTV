@@ -54,7 +54,7 @@
 			console.info("applyDarkCSS");
 			applyDarkCSS();
 		} else {
-			//removeDarkCSS();
+			removeDarkCSS();
 		}
 		updateConfig();
 	}
@@ -72,46 +72,77 @@
 		$("#main_col_box").addClass('yc-fix-top-margin');
 		$("#right_col").addClass('yc-fix-top-margin');
 		$("#main_col").addClass('yc-fix-main_col-top-margin');
-		//$("#sign_p_15").remove();
-		//$("#sign_p_18").remove();
 		$(".sign_posid").remove();
 		$("#dy_bottom_shadow").remove();
 		$(".chat-right-ad").remove();
+		$(".lol-ad").remove();
 	}
 
-	function applyDarkCSS () {
-		console.info("in applyDarkCSS");
-		$("#room_container").addClass('yc-dark-5');
-		$("#live_userinfo").addClass('yc-dark-4');
-		$("#live_userinfo").attr('style', 'background-color: #424242 !important');
-		$(".headline h1").addClass('yc-dark-font-color');
-		$(".r_else li").attr('style', 'color: #9E9E9E !important');
-		$(".redcolor").addClass('yc-dark-font-color');
-		$("#room_tags").addClass('yc-dark-font-color');
-		$(".room_mes .r_else_tips dd a").addClass('yc-dark-font-color');
-		$("#live_videobar").addClass('yc-dark-4');
-		$("#header").addClass('yc-dark-4');
-		$("#header a").addClass('yc-dark-font-color-lighter');
-		$("#chat_lines").attr('style', 'background-color: black !important');
-		$(".text_cont").addClass('yc-dark-font-color-lighter');
-		$("#js_chat_mem").addClass('yc-dark-4');
-		$(".chat_mem_t").addClass('yc-dark-4');
-		$(".m_cnt").attr('style', 'background-color: #757575 !important');
-		$(".m_cnt a").addClass('yc-dark-font-color');
-		$("#broadcast_div").addClass('yc-dark-4');
-		$(".c_speak").attr('style', 'background-color: #212121 !important');
-		$(".chat-n-tit h3").addClass('yc-dark-font-color');
-		$(".chat-live-rec .title h3").addClass('yc-dark-font-color');
-		$(".chat-live-rec .cont ul li a .txt h4").addClass('yc-dark-font-color');
-		$(".js_share_box_1").addClass('yc-dark-5');
-		$("#js_share_more1").addClass('yc-dark-4');
-		$(".app_box").addClass('yc-dark-4');
-		$(".cq_list ul li").addClass('yc-dark-4');
-		$("#cqf_but").addClass('yc-dark-5');
-		$("#details_div").addClass('yc-dark-5');
-		$(".chat_cls a").addClass('yc-dark-5');
-		$(".lw_item_hovercont").addClass('yc-dark-5');
+	var darkCSSList = {
+		addClass: [
+			{ selector: "#room_container", cssClass: "yc-dark-5" },
+			{ selector: "#live_userinfo", cssClass: "yc-dark-4" },
+			{ selector: ".headline h1", cssClass: "yc-dark-font-color" },
+			{ selector: ".redcolor", cssClass: "yc-dark-font-color" },
+			{ selector: "#room_tags", cssClass: "yc-dark-font-color" },
+			{ selector: ".room_mes .r_else_tips dd a", cssClass: "yc-dark-font-color" },
+			{ selector: "#live_videobar", cssClass: "yc-dark-4" },
+			{ selector: "#header", cssClass: "yc-dark-4" },
+			{ selector: "#header a", cssClass: "yc-dark-font-color-lighter" },
+			{ selector: ".text_cont", cssClass: "yc-dark-font-color-lighter" },
+			{ selector: "#js_chat_mem", cssClass: "yc-dark-4" },
+			{ selector: ".chat_mem_t", cssClass: "yc-dark-4" },
+			{ selector: ".m_cnt a", cssClass: "yc-dark-font-color" },
+			{ selector: "#broadcast_div", cssClass: "yc-dark-4" },
+			{ selector: ".chat-n-tit h3", cssClass: "yc-dark-font-color" },
+			{ selector: ".chat-live-rec .title h3", cssClass: "yc-dark-font-color" },
+			{ selector: ".chat-live-rec .cont ul li a .txt h4", cssClass: "yc-dark-font-color" },
+			{ selector: ".js_share_box_1", cssClass: "yc-dark-5" },
+			{ selector: "#js_share_more1", cssClass: "yc-dark-4" },
+			{ selector: ".app_box", cssClass: "yc-dark-4" },
+			{ selector: ".cq_list ul li", cssClass: "yc-dark-4" },
+			{ selector: "#cqf_but", cssClass: "yc-dark-5" },
+			{ selector: "#details_div", cssClass: "yc-dark-5" },
+			{ selector: ".chat_cls a", cssClass: "yc-dark-5" },
+			{ selector: ".lw_item_hovercont", cssClass: "yc-dark-5" },
+			{ selector: "#mainbody", cssClass: "yc-dark-5" },
+			{ selector: "#live-list-content", cssClass: "yc-dark-5" },
+			{ selector: ".play-list li .mes", cssClass: "yc-dark-4" },
+			{ selector: ".play-list li a", cssClass: "yc-dark-noborder" },
+			{ selector: ".play-list li .mes-tit h3", cssClass: "yc-dark-font-color" },
+			{ selector: ".tse-content", cssClass: "yc-dark-4" },
+			{ selector: ".broadcast-meta .info .title", cssClass: "yc-dark-font-color" },
+		],
+		attr: [
+			{ selector: "#live_userinfo", style: 'background-color: #424242 !important' },
+			{ selector: ".r_else li", style: 'color: #9E9E9E !important' },
+			{ selector: "#chat_lines", style: 'background-color: black !important' },
+			{ selector: ".m_cnt", style: 'background-color: #757575 !important' },
+			{ selector: ".c_speak", style: 'background-color: #212121 !important' },
+			{ selector: ".cq_fans .m_list .m_nav ul li.activ a", style: 'color: #9E9E9E !important' },
+		]
+	};
 
+	function applyDarkCSS () {
+		var classes = darkCSSList.addClass;
+		var attrs = darkCSSList.attr;
+		for (var i = 0; i < classes.length; i++) {
+			$(classes[i].selector).addClass(classes[i].cssClass);
+		};
+		for (var i = 0; i < attrs.length; i++) {
+			$(attrs[i].selector).attr('style', attrs[i].style);
+		};
+	}
+
+	function removeDarkCSS () {
+		var classes = darkCSSList.addClass;
+		var attrs = darkCSSList.attr;
+		for (var i = 0; i < classes.length; i++) {
+			$(classes[i].selector).removeClass(classes[i].cssClass);
+		};
+		for (var i = 0; i < attrs.length; i++) {
+			$(attrs[i].selector).removeAttr('style');
+		};
 	}
 
 	function initConfig () {
