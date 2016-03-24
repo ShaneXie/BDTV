@@ -28,6 +28,10 @@
 	border-right: 1px black solid;
 }
 
+.yc-donation {
+	margin: 8px 0;
+}
+
 .yc-options {
 	height: 100%;
 	width: 65%;
@@ -35,6 +39,9 @@
 
 .yc-title sub {
 	font-size: 50%;
+}
+.yc-beg {
+	font-size: 90%;
 }
 
 .yc-opt {
