@@ -42,7 +42,7 @@
 
 						var img = chrome.extension.getURL('../assets/img/alipay.png');
 						$("#donation-img").attr("src", img);
-						
+
 						resolve("Component initialized");
 					} );
 				}
@@ -143,11 +143,14 @@
 			{ selector: ".tag_list ul li a", cssClass: "yc-dark-font-color" },
 			{ selector: ".head-nav .assort .a-pop", cssClass: "yc-dark-4" },
 			{ selector: ".head-nav .assort .a-list .btns li a", cssClass: "yc-dark-5" },
+			{ selector: ".head .game_cas .game_btn a", cssClass: "yc-dark-5" },
 			{ selector: ".head-nav .assort .a-list>h3", cssClass: "yc-dark-font-color" },
 			{ selector: ".item-data .unit .title", cssClass: "yc-dark-4" },
 			{ selector: ".row .row-top .t-tag a", cssClass: "yc-dark-4" },
 			{ selector: ".hot-recom li", cssClass: "yc-dark-4" },
 			{ selector: ".hot-word", cssClass: "yc-dark-4" },
+			{ selector: ".poptip", cssClass: "yc-dark-4" },
+			{ selector: ".m_list", cssClass: "yc-dark-4" },
 			{ selector: ".classify-li ul li a", cssClass: "yc-dark-font-color" },
 			{ selector: ".classify_li ul li a", cssClass: "yc-dark-font-color" },
 			{ selector: ".row a", cssClass: "yc-dark-font-color" },

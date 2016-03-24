@@ -1,6 +1,6 @@
 {
   "name": "鱼刺",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "manifest_version": 2,
   "description": "BetterDouyuTV斗鱼TV拓展插件",
   "homepage_url": "http://430.io/yu-ci-betterdouyutv/",
@@ -27,7 +27,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.douyutv.com/*"
+        "*://*.douyutv.com/*",
+        "*://*.douyu.com/*"
       ],
       "css": [
         "css/flex-layout.min.css",
