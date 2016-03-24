@@ -2,8 +2,8 @@
   "name": "鱼刺",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "斗鱼TV拓展插件",
-  "homepage_url": "http://430.io",
+  "description": "BetterDouyuTV斗鱼TV拓展插件",
+  "homepage_url": "http://430.io/yu-ci-betterdouyutv/",
   "icons": {
     "16": "assets/icons/icon16.png",
     "48": "assets/icons/icon48.png",
