@@ -93,6 +93,7 @@
 
 	function removeAD () {
 		$("#chat-top-ad").remove();
+		$(".chat-top-ad").remove();
 		$("#main_col_box").addClass('yc-fix-top-margin');
 		$("#right_col").addClass('yc-fix-top-margin');
 		$("#main_col").addClass('yc-fix-main_col-top-margin');
@@ -104,6 +105,9 @@
 		$("div[data-type='sign']").remove();
 		$("div[data-type='dyrec']").remove();
 		$(".bglink").remove();
+		$(".room-ad-top").remove();
+		$("#js-live-room-normal-equal-left").remove();
+		$(".rec").remove();
 	}
 
 	var darkCSSList = {
@@ -155,7 +159,23 @@
 			{ selector: ".classify_li ul li a", cssClass: "yc-dark-font-color" },
 			{ selector: ".row a", cssClass: "yc-dark-font-color" },
 			{ selector: ".hot-recom li .text", cssClass: "yc-dark-font-color" },
-			{ selector: ".head-oth .o-history .h-list>li", cssClass: "yc-dark-4" }
+			{ selector: ".head-oth .o-history .h-list>li", cssClass: "yc-dark-4" },
+			{ selector: ".stats-and-actions", cssClass: "yc-dark-4" },
+			{ selector: ".chat-member", cssClass: "yc-dark-4" },
+			{ selector: ".live-room-normal-right", cssClass: "yc-dark-4" },
+			{ selector: "#anchor-info", cssClass: "yc-dark-4" },
+			{ selector: ".chat-speak", cssClass: "yc-dark-4" },
+			{ selector: ".fans-list .f-tit ul li.cur", cssClass: "yc-dark-4" },
+			{ selector: ".fans-list .f-tit ul li", cssClass: "yc-dark-4" },
+			{ selector: ".fans-rank .fans-list", cssClass: "yc-dark-4" },
+			{ selector: ".chat-notice p", cssClass: "yc-dark-4" },
+			{ selector: ".chat-cont", cssClass: "yc-dark-4" },
+			{ selector: ".lw-item-hovercont", cssClass: "yc-dark-4" },
+			{ selector: ".qrcode-box .con, .share-box .con", cssClass: "yc-dark-4" },
+			{ selector: ".give-gift .g-list li .lw-item-hover .text p strong", cssClass: "yc-dark-font-color" },
+			{ selector: "#anchor-info a", cssClass: "yc-dark-font-color" },
+			{ selector: "#anchor-info i", cssClass: "yc-dark-font-color" },
+			{ selector: "#anchor-info li", cssClass: "yc-dark-font-color" }
 		],
 		attr: [
 			{ selector: "#live_userinfo", style: 'background-color: #424242 !important' },
